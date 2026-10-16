@@ -26,7 +26,7 @@ const DEFAULT_REGISTRY = {
       category: "web",
       tags: ["seo", "opengraph", "html", "meta"],
       status: "active",
-      url: "https://web.tools.developeros.in"
+      url: "https://web.toolkit.developeros.in"
     },
     {
       id: "api-curl-to-python",
@@ -36,7 +36,7 @@ const DEFAULT_REGISTRY = {
       category: "api",
       tags: ["curl", "python", "javascript", "http"],
       status: "active",
-      url: "https://api.tools.developeros.in"
+      url: "https://api.toolkit.developeros.in"
     },
     {
       id: "crypto-hash-generator",
@@ -46,7 +46,7 @@ const DEFAULT_REGISTRY = {
       category: "security",
       tags: ["hash", "sha256", "checksum", "cryptography"],
       status: "active",
-      url: "https://crypto.tools.developeros.in"
+      url: "https://crypto.toolkit.developeros.in"
     },
     {
       id: "data-json-yaml-converter",
@@ -56,7 +56,7 @@ const DEFAULT_REGISTRY = {
       category: "data",
       tags: ["json", "yaml", "toml", "converter"],
       status: "active",
-      url: "https://data.tools.developeros.in"
+      url: "https://data.toolkit.developeros.in"
     },
     {
       id: "cloud-cron-parser",
@@ -66,7 +66,7 @@ const DEFAULT_REGISTRY = {
       category: "devops",
       tags: ["cron", "schedule", "devops", "cloud"],
       status: "active",
-      url: "https://devops.tools.developeros.in"
+      url: "https://devops.toolkit.developeros.in"
     },
     {
       id: "code-regex-tester",
@@ -76,7 +76,7 @@ const DEFAULT_REGISTRY = {
       category: "code",
       tags: ["regex", "pattern", "python", "matcher"],
       status: "active",
-      url: "https://code.tools.developeros.in"
+      url: "https://code.toolkit.developeros.in"
     },
     {
       id: "db-sql-formatter",
@@ -86,7 +86,7 @@ const DEFAULT_REGISTRY = {
       category: "database",
       tags: ["sql", "database", "postgres", "format"],
       status: "active",
-      url: "https://sql.tools.developeros.in"
+      url: "https://sql.toolkit.developeros.in"
     },
     {
       id: "media-base64-converter",
@@ -96,7 +96,7 @@ const DEFAULT_REGISTRY = {
       category: "media",
       tags: ["base64", "image", "datauri", "media"],
       status: "active",
-      url: "https://media.tools.developeros.in"
+      url: "https://media.toolkit.developeros.in"
     },
     {
       id: "doc-markdown-editor",
@@ -106,7 +106,7 @@ const DEFAULT_REGISTRY = {
       category: "documentation",
       tags: ["markdown", "docs", "gfm", "preview"],
       status: "active",
-      url: "https://docs.tools.developeros.in"
+      url: "https://docs.toolkit.developeros.in"
     },
     {
       id: "perf-payload-estimator",
@@ -116,7 +116,7 @@ const DEFAULT_REGISTRY = {
       category: "performance",
       tags: ["gzip", "brotli", "compression", "performance"],
       status: "active",
-      url: "https://perf.tools.developeros.in"
+      url: "https://perf.toolkit.developeros.in"
     }
   ]
 };

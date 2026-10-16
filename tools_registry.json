@@ -10,7 +10,7 @@
       "category": "web",
       "target_env": "streamlit",
       "repo_name": "devos-suite-web-craft",
-      "deployment_url": "https://web.tools.developeros.in"
+      "deployment_url": "https://web.toolkit.developeros.in"
     },
     {
       "id": "suite-api-network",
@@ -19,7 +19,7 @@
       "category": "api",
       "target_env": "streamlit",
       "repo_name": "devos-suite-api-network",
-      "deployment_url": "https://api.tools.developeros.in"
+      "deployment_url": "https://api.toolkit.developeros.in"
     },
     {
       "id": "suite-crypto-security",
@@ -28,7 +28,7 @@
       "category": "security",
       "target_env": "streamlit",
       "repo_name": "devos-suite-crypto-security",
-      "deployment_url": "https://crypto.tools.developeros.in"
+      "deployment_url": "https://crypto.toolkit.developeros.in"
     },
     {
       "id": "suite-data-convert",
@@ -37,7 +37,7 @@
       "category": "data",
       "target_env": "streamlit",
       "repo_name": "devos-suite-data-convert",
-      "deployment_url": "https://data.tools.developeros.in"
+      "deployment_url": "https://data.toolkit.developeros.in"
     },
     {
       "id": "suite-cloud-devops",
@@ -46,7 +46,7 @@
       "category": "devops",
       "target_env": "streamlit",
       "repo_name": "devos-suite-cloud-devops",
-      "deployment_url": "https://devops.tools.developeros.in"
+      "deployment_url": "https://devops.toolkit.developeros.in"
     },
     {
       "id": "suite-code-refactor",
@@ -55,7 +55,7 @@
       "category": "code",
       "target_env": "streamlit",
       "repo_name": "devos-suite-code-refactor",
-      "deployment_url": "https://code.tools.developeros.in"
+      "deployment_url": "https://code.toolkit.developeros.in"
     },
     {
       "id": "suite-db-sql",
@@ -64,7 +64,7 @@
       "category": "database",
       "target_env": "streamlit",
       "repo_name": "devos-suite-db-sql",
-      "deployment_url": "https://sql.tools.developeros.in"
+      "deployment_url": "https://sql.toolkit.developeros.in"
     },
     {
       "id": "suite-media-assets",
@@ -73,7 +73,7 @@
       "category": "media",
       "target_env": "streamlit",
       "repo_name": "devos-suite-media-assets",
-      "deployment_url": "https://media.tools.developeros.in"
+      "deployment_url": "https://media.toolkit.developeros.in"
     },
     {
       "id": "suite-doc-specs",
@@ -82,7 +82,7 @@
       "category": "documentation",
       "target_env": "streamlit",
       "repo_name": "devos-suite-doc-specs",
-      "deployment_url": "https://docs.tools.developeros.in"
+      "deployment_url": "https://docs.toolkit.developeros.in"
     },
     {
       "id": "suite-perf-testing",
@@ -91,7 +91,7 @@
       "category": "performance",
       "target_env": "streamlit",
       "repo_name": "devos-suite-perf-testing",
-      "deployment_url": "https://perf.tools.developeros.in"
+      "deployment_url": "https://perf.toolkit.developeros.in"
     }
   ],
   "tools": [
