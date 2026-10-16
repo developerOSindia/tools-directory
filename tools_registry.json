@@ -1,0 +1,339 @@
+{
+  "$schema": "./schema.json",
+  "version": "1.0.0",
+  "description": "Central Tool Registry for DeveloperOS Open-Source Tools Ecosystem (https://developeros.in)",
+  "suites": [
+    {
+      "id": "suite-web-craft",
+      "name": "Web & Frontend Craft Suite",
+      "description": "Essential web development utilities: CSS generators, meta-tag builders, HTML sanitizers, SVG encoders.",
+      "category": "web",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-web-craft",
+      "deployment_url": "https://web.tools.developeros.in"
+    },
+    {
+      "id": "suite-api-network",
+      "name": "API & Network Suite",
+      "description": "HTTP request builders, cURL converters, JWT decoders, webhook debuggers, and status code references.",
+      "category": "api",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-api-network",
+      "deployment_url": "https://api.tools.developeros.in"
+    },
+    {
+      "id": "suite-crypto-security",
+      "name": "Cryptography & Security Suite",
+      "description": "Secure hashing algorithms, HMAC signatures, UUID/ULID generation, SSL certificate inspection, secret masking.",
+      "category": "security",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-crypto-security",
+      "deployment_url": "https://crypto.tools.developeros.in"
+    },
+    {
+      "id": "suite-data-convert",
+      "name": "Data Conversion & Serialization Suite",
+      "description": "Bidirectional converters for JSON, YAML, TOML, XML, CSV, diff inspectors, and jq filters.",
+      "category": "data",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-data-convert",
+      "deployment_url": "https://data.tools.developeros.in"
+    },
+    {
+      "id": "suite-cloud-devops",
+      "name": "Cloud & DevOps Configuration Suite",
+      "description": "Dockerfile linters, Kubernetes manifest validators, cron expression humanizers, CIDR range calculators.",
+      "category": "devops",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-cloud-devops",
+      "deployment_url": "https://devops.tools.developeros.in"
+    },
+    {
+      "id": "suite-code-refactor",
+      "name": "Code Refactoring & Syntax Suite",
+      "description": "Regex testers, AST inspectors, code minifiers, prettifiers, snippet generators across multiple languages.",
+      "category": "code",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-code-refactor",
+      "deployment_url": "https://code.tools.developeros.in"
+    },
+    {
+      "id": "suite-db-sql",
+      "name": "Database & SQL Utilities Suite",
+      "description": "SQL query formatters, mock schema builders, synthetic tabular data generators, query plan visualizers.",
+      "category": "database",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-db-sql",
+      "deployment_url": "https://sql.tools.developeros.in"
+    },
+    {
+      "id": "suite-media-assets",
+      "name": "Media & Asset Processing Suite",
+      "description": "Base64 image encoders, SVG optimizers, color palette extractors, aspect ratio calculators.",
+      "category": "media",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-media-assets",
+      "deployment_url": "https://media.tools.developeros.in"
+    },
+    {
+      "id": "suite-doc-specs",
+      "name": "Documentation & Specifications Suite",
+      "description": "Markdown previewers, OpenAPI 3.0 visualizers, changelog generators, README builders.",
+      "category": "documentation",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-doc-specs",
+      "deployment_url": "https://docs.tools.developeros.in"
+    },
+    {
+      "id": "suite-perf-testing",
+      "name": "Performance & Benchmark Suite",
+      "description": "Payload size calculators, regex execution benchmarks, network latency estimators, load test script generators.",
+      "category": "performance",
+      "target_env": "streamlit",
+      "repo_name": "devos-suite-perf-testing",
+      "deployment_url": "https://perf.tools.developeros.in"
+    }
+  ],
+  "tools": [
+    {
+      "id": "web-meta-tag-generator",
+      "name": "OpenGraph & Meta Tag Generator",
+      "description": "Generate and preview valid HTML meta tags, OpenGraph cards, and Twitter Cards.",
+      "suite_id": "suite-web-craft",
+      "category": "web",
+      "tags": ["seo", "opengraph", "html", "meta"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "web-css-glassmorphism",
+      "name": "CSS Glassmorphism & Shadow Builder",
+      "description": "Interactive generator for modern CSS backdrop-filter, gradients, and box-shadows.",
+      "suite_id": "suite-web-craft",
+      "category": "web",
+      "tags": ["css", "styling", "frontend"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    },
+    {
+      "id": "api-curl-to-python",
+      "name": "cURL Command to Code Converter",
+      "description": "Parse raw cURL commands into clean Python (requests/httpx) and JavaScript (fetch) code.",
+      "suite_id": "suite-api-network",
+      "category": "api",
+      "tags": ["curl", "python", "javascript", "http"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "api-jwt-inspector",
+      "name": "Client-Side JWT Inspector",
+      "description": "Decode and validate JSON Web Token headers, claims, and expiration timestamps without server transmission.",
+      "suite_id": "suite-api-network",
+      "category": "api",
+      "tags": ["jwt", "auth", "security", "tokens"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    },
+    {
+      "id": "crypto-hash-generator",
+      "name": "Multi-Algorithm Hash Generator",
+      "description": "Compute SHA-256, SHA-512, MD5, and Blake2 hashes from text strings or files.",
+      "suite_id": "suite-crypto-security",
+      "category": "security",
+      "tags": ["hash", "sha256", "checksum", "cryptography"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "crypto-uuid-ulid-gen",
+      "name": "UUID / ULID Cryptographic Generator",
+      "description": "Batch generate UUIDv4, UUIDv7, and ULID identifiers with collision checking.",
+      "suite_id": "suite-crypto-security",
+      "category": "security",
+      "tags": ["uuid", "ulid", "identifier", "security"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    },
+    {
+      "id": "data-json-yaml-converter",
+      "name": "JSON <-> YAML <-> TOML Converter",
+      "description": "Convert, format, and validate structured data between JSON, YAML, and TOML schemas.",
+      "suite_id": "suite-data-convert",
+      "category": "data",
+      "tags": ["json", "yaml", "toml", "converter"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "data-csv-to-json",
+      "name": "CSV to JSON / JSON to CSV Transformer",
+      "description": "Bi-directional tabular transformation with automatic delimiter detection and type inference.",
+      "suite_id": "suite-data-convert",
+      "category": "data",
+      "tags": ["csv", "json", "data", "table"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "cloud-cron-parser",
+      "name": "Cron Expression Explainer & Schedule Calculator",
+      "description": "Translate complex crontab schedules into human language and forecast upcoming execution timestamps.",
+      "suite_id": "suite-cloud-devops",
+      "category": "devops",
+      "tags": ["cron", "schedule", "devops", "cloud"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "cloud-cidr-calculator",
+      "name": "IP & CIDR Subnet Calculator",
+      "description": "Calculate network ranges, broadcast addresses, subnet masks, and usable host counts for IPv4/IPv6.",
+      "suite_id": "suite-cloud-devops",
+      "category": "devops",
+      "tags": ["cidr", "ip", "subnet", "networking"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    },
+    {
+      "id": "code-regex-tester",
+      "name": "Regular Expression Tester & Match Explainer",
+      "description": "Test regex patterns with visual match group highlighting and ReDoS protection.",
+      "suite_id": "suite-code-refactor",
+      "category": "code",
+      "tags": ["regex", "pattern", "python", "matcher"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "code-ast-inspector",
+      "name": "Python AST Tree Visualizer",
+      "description": "Inspect Abstract Syntax Trees of Python code for linting, security analysis, and static inspection.",
+      "suite_id": "suite-code-refactor",
+      "category": "code",
+      "tags": ["ast", "python", "syntax", "compiler"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "db-sql-formatter",
+      "name": "SQL Query Formatter & Minifier",
+      "description": "Format and beautify complex SQL queries across PostgreSQL, MySQL, SQLite, and Snowflake dialects.",
+      "suite_id": "suite-db-sql",
+      "category": "database",
+      "tags": ["sql", "database", "postgres", "format"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "db-mock-generator",
+      "name": "Relational Mock Data Generator",
+      "description": "Generate synthetic SQL INSERT statements with foreign key consistency and faker data.",
+      "suite_id": "suite-db-sql",
+      "category": "database",
+      "tags": ["mock", "sql", "faker", "testing"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "media-base64-converter",
+      "name": "Base64 Image & Data URI Encoder/Decoder",
+      "description": "Convert PNG, JPEG, SVG, WebP images to ready-to-use CSS data URIs and vice versa.",
+      "suite_id": "suite-media-assets",
+      "category": "media",
+      "tags": ["base64", "image", "datauri", "media"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "media-svg-cleaner",
+      "name": "SVG Optimizer & Path Cleaner",
+      "description": "Clean, sanitize, and minify SVG markup removing editor metadata and redundant attributes.",
+      "suite_id": "suite-media-assets",
+      "category": "media",
+      "tags": ["svg", "graphics", "vector", "optimizer"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    },
+    {
+      "id": "doc-markdown-editor",
+      "name": "Markdown Editor & Realtime GitHub Previewer",
+      "description": "Full-featured Markdown and GFM live previewer with table generator and math formula support.",
+      "suite_id": "suite-doc-specs",
+      "category": "documentation",
+      "tags": ["markdown", "docs", "gfm", "preview"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "doc-openapi-viewer",
+      "name": "OpenAPI / Swagger Spec Validator",
+      "description": "Validate OpenAPI 3.0/3.1 YAML/JSON specs and preview interactive documentation endpoints.",
+      "suite_id": "suite-doc-specs",
+      "category": "documentation",
+      "tags": ["openapi", "swagger", "api", "docs"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "perf-payload-estimator",
+      "name": "API Payload Size & Compression Estimator",
+      "description": "Analyze raw payload sizes and estimate Gzip, Brotli, and Zstandard compressed transfer sizes.",
+      "suite_id": "suite-perf-testing",
+      "category": "performance",
+      "tags": ["gzip", "brotli", "compression", "performance"],
+      "execution_env": "streamlit",
+      "status": "active",
+      "version": "1.0.0",
+      "privacy_level": "ephemeral_server_memory"
+    },
+    {
+      "id": "perf-latency-calc",
+      "name": "Global Network Latency Calculator",
+      "description": "Estimate theoretical RTT and packet transfer times across global cloud regions and undersea cables.",
+      "suite_id": "suite-perf-testing",
+      "category": "performance",
+      "tags": ["network", "latency", "rtt", "cloud"],
+      "execution_env": "streamlit",
+      "status": "planned",
+      "version": "0.1.0",
+      "privacy_level": "ephemeral_client_only"
+    }
+  ]
+}

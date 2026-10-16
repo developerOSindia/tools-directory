@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeveloperOS — Open-Source Developer Tools Directory</title>
+  <meta name="description" content="Centralized, zero-tracking, open-source developer utilities ecosystem by DeveloperOS. Free, fast, client-side, and privacy-first developer tools.">
+  <link rel="canonical" href="https://developeros.in/tools">
+  <meta property="og:title" content="DeveloperOS — Open-Source Developer Tools Directory">
+  <meta property="og:description" content="Centralized, zero-tracking, open-source developer utilities ecosystem by DeveloperOS. Free, fast, client-side, and privacy-first developer tools.">
+  <meta property="og:image" content="https://developeros.in/og-tools.png">
+  <meta property="og:url" content="https://developeros.in/tools">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="https://developeros.in" class="brand-link" target="_blank" rel="noopener">DeveloperOS</a>
+        <span class="brand-separator">/</span>
+        <span class="brand-sub">Tools Directory</span>
+      </div>
+      <div class="nav-actions">
+        <span class="privacy-pill">🛡️ Zero-Trust / Ephemeral</span>
+        <a href="https://github.com/developerOSindia" class="nav-btn" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="main-content">
+    <section class="hero">
+      <h1 class="hero-title">DeveloperOS Tools Directory</h1>
+      <p class="hero-subtitle">Fast, private, and open-source utilities for modern software engineering teams. Zero telemetry. Zero server persistence.</p>
+      
+      <!-- Search & Filters -->
+      <div class="search-box">
+        <input type="text" id="tool-search" placeholder="Search by tool name, tag, or keyword (e.g., jwt, curl, regex, json)..." autocomplete="off">
+      </div>
+    </section>
+
+    <!-- Categories / Suites Bar -->
+    <section class="suites-filter-bar" id="suite-filters">
+      <button class="filter-btn active" data-suite="all">All Suites</button>
+      <!-- Populated dynamically via JS -->
+    </section>
+
+    <!-- Tool Cards Grid -->
+    <section class="tools-grid-section">
+      <div class="grid-header">
+        <h2 id="section-heading">Available Utilities</h2>
+        <span id="tool-count" class="tool-count-badge">Loading tools...</span>
+      </div>
+      <div class="tools-grid" id="tools-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <p>&copy; 2026 DeveloperOS. Built with open-source pride for global developers.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://developeros.in" target="_blank" rel="noopener">developeros.in</a>
+        <a href="https://github.com/developerOSindia" target="_blank" rel="noopener">GitHub Organization</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
