@@ -177,6 +177,44 @@ function setupSearch() {
   });
 }
 
+let toastTimer = null;
+window.triggerToast = function (message) {
+  let toast = document.getElementById("quick-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "quick-toast";
+    toast.className = "quick-toast";
+    toast.innerHTML = `<span class="quick-toast-icon">✓</span><span id="quick-toast-msg"></span>`;
+    document.body.appendChild(toast);
+  }
+  const msgEl = document.getElementById("quick-toast-msg");
+  if (msgEl) msgEl.textContent = message;
+  toast.classList.add("show");
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2200);
+};
+
+window.copyToolLink = function (url, name, event) {
+  if (event) event.stopPropagation();
+  navigator.clipboard.writeText(url).then(() => {
+    window.triggerToast(`Copied ${name} link! 📋`);
+  }).catch(() => {
+    window.triggerToast(`Link: ${url}`);
+  });
+};
+
+window.copyCliCommand = function (id, event) {
+  if (event) event.stopPropagation();
+  const cmd = `devos ${id}`;
+  navigator.clipboard.writeText(cmd).then(() => {
+    window.triggerToast(`Copied CLI: ${cmd} 🚀`);
+  }).catch(() => {
+    window.triggerToast(`CLI: ${cmd}`);
+  });
+};
+
 function renderTools() {
   const container = document.getElementById("tools-container");
   const countBadge = document.getElementById("tool-count");
@@ -210,9 +248,10 @@ function renderTools() {
     const statusClass = tool.status === "active" ? "status-active" : "status-planned";
     const statusLabel = tool.status === "active" ? "Active" : "In Roadmap";
     const targetUrl = tool.url || "#";
+    const safeName = tool.name.replace(/'/g, "\\'");
 
     return `
-      <a class="tool-card" href="${targetUrl}" target="_blank" rel="noopener">
+      <div class="tool-card">
         <div class="card-top">
           <span class="card-category">${tool.category || 'tool'}</span>
           <span class="status-badge ${statusClass}">${statusLabel}</span>
@@ -222,7 +261,16 @@ function renderTools() {
         <div class="card-footer">
           ${(tool.tags || []).map(tag => `<span class="tool-tag">#${tag}</span>`).join("")}
         </div>
-      </a>
+        <div class="card-actions">
+          <a href="${targetUrl}" target="_blank" rel="noopener" class="btn-launch">⚡ Launch Tool ↗</a>
+          <button type="button" class="btn-quick-copy" onclick="copyToolLink('${targetUrl}', '${safeName}', event)" title="Copy Direct Link">
+            📋 Copy Link
+          </button>
+          <button type="button" class="btn-cli-copy" onclick="copyCliCommand('${tool.id}', event)" title="Copy CLI Command">
+            &gt;_ CLI
+          </button>
+        </div>
+      </div>
     `;
   }).join("");
 }

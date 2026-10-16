@@ -270,6 +270,100 @@ body {
   border-radius: 4px;
 }
 
+/* Card Action Bar & Quick Copy */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--devos-surface-border);
+}
+
+.btn-launch {
+  flex: 1 1 120px;
+  background-color: #f97316;
+  color: #ffffff;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.15s ease;
+  touch-action: manipulation;
+}
+
+.btn-launch:hover {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+.btn-quick-copy, .btn-cli-copy {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--devos-surface-border);
+  color: var(--devos-text-muted);
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--devos-font-mono);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.btn-quick-copy:hover, .btn-cli-copy:hover {
+  background-color: rgba(249, 115, 22, 0.15);
+  border-color: rgba(249, 115, 22, 0.4);
+  color: #f97316;
+}
+
+/* Floating Quick Copy Toast */
+.quick-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #f8fafc;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(16, 185, 129, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  pointer-events: none;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.quick-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.quick-toast-icon {
+  color: #10b981;
+  font-size: 1.15rem;
+}
+
 .footer {
   border-top: 1px solid var(--devos-surface-border);
   background-color: var(--devos-bg);
@@ -292,4 +386,75 @@ body {
   color: var(--devos-accent);
   text-decoration: none;
   margin-left: 16px;
+}
+
+/* Tablet Media Queries (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .filter-btn, .btn-launch, .btn-quick-copy, .btn-cli-copy {
+    min-height: 44px;
+  }
+}
+
+/* Mobile Media Queries (<= 640px) */
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .suites-filter-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    flex-wrap: nowrap;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    min-height: 44px;
+    padding: 8px 16px;
+  }
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn-launch {
+    grid-column: 1 / -1;
+    min-height: 46px;
+  }
+  .btn-quick-copy, .btn-cli-copy {
+    min-height: 44px;
+  }
+  .quick-toast {
+    bottom: 24px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 100px);
+    width: calc(100% - 32px);
+    max-width: 400px;
+    justify-content: center;
+  }
+  .quick-toast.show {
+    transform: translate(-50%, 0);
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links a {
+    margin: 0 8px;
+  }
 }
